@@ -1,45 +1,18 @@
-# TypeScript Express Hello World (v1)
+# TypeScript Express Examples
 
-Basic Hello World implementation with Express.js and TypeScript.
+A collection of Express.js examples using TypeScript, deployed on Coolify.
 
-## Features
-- Express.js web server
-- TypeScript support
+## Projects
+
+### [v1 - Hello World](./v1)
+Basic Hello World application demonstrating:
+- Express.js setup with TypeScript
 - Docker containerization
-- Automatic deployment via Coolify
-
-## Project Structure
-\`\`\`
-v1/
-├── src/
-│   └── index.ts
-├── .github/
-│   └── workflows/
-│       └── deploy.yml
-├── Dockerfile
-├── docker-compose.yml
-├── package.json
-├── package-lock.json
-└── tsconfig.json
-\`\`\`
-
-## Development
-\`\`\`bash
-# Install dependencies
-npm install
-
-# Run in development mode
-npm run dev
-
-# Build for production
-npm run build
-
-# Run in production mode
-npm start
-\`\`\`
+- Coolify deployment
+- Basic endpoint (`GET /`)
 
 ## Deployment
-Automatically deployed to Coolify when changes are pushed to the master branch.
+All versions are deployed to Coolify and accessible at their respective URLs.
 
-## Access
-The application is accessible at: http://os48wos4gw0ww4c040k4co84.145.223.80.149.sslip.io/
+### Current Deployments
+- v1 (Hello World): http://os48wos4gw0ww4c040k4co84.145.223.80.149.sslip.io/

@@ -26,8 +26,9 @@ build/
 Thumbs.db
 desktop.ini
 
-*.log
-
 # Cursor editor
 .cursor-server/
-.cursor/ 
+.cursor/
+
+# Node.js
+package-lock.json 
