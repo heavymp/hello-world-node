@@ -1,8 +1,8 @@
-import Spectre from './components/Spectre'
-import './App.css'
+import Spectre from './components/Spectre';
+import './App.css';
 
 function App() {
-  return <Spectre />
+  return <Spectre />;
 }
 
-export default App
+export default App; 
