@@ -15,8 +15,6 @@ COPY --from=build /app/dist ./dist
 COPY package*.json ./
 RUN npm install --production
 
-# Ensure proper networking configuration
-ENV HOST=0.0.0.0
 ENV PORT=4173
 EXPOSE 4173
 
