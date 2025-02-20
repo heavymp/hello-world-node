@@ -13,11 +13,9 @@ FROM node:20-alpine
 WORKDIR /app
 COPY --from=build /app/dist ./dist
 COPY package*.json ./
+RUN npm install --production && apk add --no-cache curl
 
-# Install curl for health checks and production dependencies
-RUN apk add --no-cache curl && \
-    npm install --production
-
+ENV HOST=0.0.0.0
 ENV PORT=4173
 EXPOSE 4173
 

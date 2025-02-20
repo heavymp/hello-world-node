@@ -5,10 +5,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 4173,
-    host: true // Allow connections from all hosts
+    host: true,
+    cors: true
   },
   preview: {
     port: 4173,
     host: true
-  }
+  },
+  base: './',  // This might work better for subdomains than '/'
 });
