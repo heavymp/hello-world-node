@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "serve -s dist -p 4173"
+    "start": "serve -s dist -p 4173 --cors"
   },
   "dependencies": {
     "react": "^18.2.0",
