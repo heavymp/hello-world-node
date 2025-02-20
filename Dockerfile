@@ -15,7 +15,13 @@ COPY --from=build /app/dist ./dist
 COPY package*.json ./
 RUN npm install --production
 
-# Add this to ensure the server listens on all interfaces
+# Ensure proper networking configuration
 ENV HOST=0.0.0.0
+ENV PORT=4173
 EXPOSE 4173
+
+# Update healthcheck
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+  CMD curl -f http://localhost:4173/ || exit 1
+
 CMD ["npm", "start"] 
