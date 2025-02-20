@@ -1,0 +1,76 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.background-animation {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, #1a0000 0%, #000000 100%);
+  animation: bgPulse 8s ease infinite;
+  z-index: 0;
+}
+
+.glowing-text {
+  font-family: 'Arial Black', Gadget, sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.glowing-text span {
+  display: inline-block;
+  animation: textFloat 2s ease-in-out infinite;
+  color: #fff;
+  text-shadow:
+    0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 30px #ff0000,
+    0 0 40px #ff4400,
+    0 0 70px #ff4400,
+    0 0 80px #ff4400;
+}
+
+.glowing-text span:nth-child(1) { animation-delay: 0.0s; }
+.glowing-text span:nth-child(2) { animation-delay: 0.1s; }
+.glowing-text span:nth-child(3) { animation-delay: 0.2s; }
+.glowing-text span:nth-child(4) { animation-delay: 0.3s; }
+.glowing-text span:nth-child(5) { animation-delay: 0.4s; }
+.glowing-text span:nth-child(7) { animation-delay: 0.5s; }
+.glowing-text span:nth-child(8) { animation-delay: 0.6s; }
+.glowing-text span:nth-child(9) { animation-delay: 0.7s; }
+.glowing-text span:nth-child(10) { animation-delay: 0.8s; }
+.glowing-text span:nth-child(11) { animation-delay: 0.9s; }
+
+@keyframes bgPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    background: radial-gradient(circle, #1a0000 0%, #000000 100%);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+    background: radial-gradient(circle, #2a0000 0%, #000000 100%);
+  }
+}
+
+@keyframes textFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1);
+    filter: brightness(1.5);
+  }
+}
