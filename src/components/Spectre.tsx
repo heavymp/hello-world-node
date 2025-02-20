@@ -1,26 +1,30 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './Spectre.css';
 
-export default function Spectre() {
+const Spectre = () => {
+  const [text, setText] = useState('');
+  const fullText = 'Hello Mario';
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const intervalId = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 100);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
-    <div className="container">
-      <div className="background-animation"></div>
-      <div className="stars"></div>
-      <div className="twinkling"></div>
-      <div className="clouds"></div>
-      <h1 className="glowing-text">
-        <span>H</span>
-        <span>E</span>
-        <span>L</span>
-        <span>L</span>
-        <span>O</span>
-        <span>&nbsp;</span>
-        <span>M</span>
-        <span>A</span>
-        <span>R</span>
-        <span>I</span>
-        <span>O</span>
-      </h1>
+    <div className="spectre-container">
+      <div className="spectre-text">{text}</div>
+      <div className="cursor"></div>
     </div>
   );
-}
+};
+
+export default Spectre;

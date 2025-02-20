@@ -74,3 +74,29 @@
     filter: brightness(1.5);
   }
 }
+
+.spectre-container {
+  display: flex;
+  align-items: center;
+  font-family: monospace;
+  font-size: 2em;
+  padding: 20px;
+}
+
+.cursor {
+  width: 3px;
+  height: 1.2em;
+  background-color: #000;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.spectre-text {
+  white-space: pre;
+}

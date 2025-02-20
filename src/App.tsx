@@ -1,9 +1,10 @@
 import './App.css';
+import Spectre from './components/Spectre';
 
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Spectre />
       <div id="health-check" style={{ display: 'none' }}>OK</div>
     </div>
   );
